@@ -49,7 +49,7 @@
     import NavBar from "components/common/navbar/NavBar";
     import TabBarControl from "components/content/tabbarControl/TabBarControl";
 
-    import  {getHomeMultidata} from "network/home";
+    import  {getHomeMultidata, getHomeGoods} from "network/home";
 
     import HomeSwiper from "./childComps/HomeSwiper";
     import RecommentView from "./childComps/RecommentView";
@@ -69,16 +69,36 @@
         data(){
           return {
               banners: [],
-              recommends: []
+              recommends: [],
+              goods: {
+                  'pop': {page: 0, list: []},
+                  'new': {page: 0, list: []},
+                  'sell': {page: 0, list: []}
+              }
           }
         },
         created() {
-            getHomeMultidata().then(res => {
-               this.banners = res.data.banner.list;
-               this.recommends = res.data.recommend.list;
-            }, err => {
+             this.getHomeMultidata()
+             this.getHomeGoods('pop')
+        },
+        methods: {
+            getHomeMultidata(){
+                getHomeMultidata().then(res => {
+                    this.banners = res.data.banner.list;
+                    this.recommends = res.data.recommend.list;
+                }, err => {
 
-            })
+                })
+            },
+
+            getHomeGoods(type){
+                const  page  =  this.goods[type].page + 1
+                getHomeGoods(type, page).then(res => {
+                    console.log('getHomeGoods'+res);
+                }).catch(err => {
+
+                })
+            }
         }
     }
 </script>

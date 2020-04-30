@@ -1,10 +1,15 @@
 import axios from 'axios'
+import {getToken} from "../utils/auth";
+
 
 export function request(config) {
   const instance = axios.create({
-    baseURL: "http://123.207.32.32:8000",
+    baseURL: '/api',
     timeout: 5000
   })
+
+  instance.defaults.headers.common["token"] = getToken();
+
 
   instance.interceptors.request.use(config => {
     console.log(config)
@@ -15,7 +20,7 @@ export function request(config) {
 
   instance.interceptors.response.use(res => {
     console.log(res)
-    return res.data
+    return res
   }, err => {
     console.log(err)
   });
