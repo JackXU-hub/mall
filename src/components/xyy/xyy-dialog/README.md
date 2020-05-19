@@ -1,0 +1,22 @@
+####公用的弹窗组件， 基于 el-dialog
+
+- 组件名称: XyyDialog,
+- 依赖:elDragDialog 是一个指令,用于弹窗拖拽:components-mediator 用于事件传递
+- 为关联组件注册事件:
+- 为关联组件的触发事件:
+- 当前组件注册事件:
+-        "open_dialog_" + (this.sectionName||this.dialogName)  打开弹窗并触发始化
+-        "close_dialog_" + (this.sectionName||this.dialog  Name) 关闭弹窗并触发关闭回调事件
+- 当前组件的触发事件:
+-         "init_dialog_" + (this.sectionName||this.dialogName)    触发初始化
+-         "closed_dialog_" + (this.sectionName||this.dialogName)  关闭弹窗后回调
+- 动态设定值:
+- 静态值:
+-      'dialogName':弹窗名称,(必填)
+-      'sectionName':弹窗名称,(必填)与dialogName二选一优先使用此字段 2019/4/4/yuliang
+-      'title'     :标题,(必填),
+-      'width'     :选填,(选填)
+- 插槽:
+-      default slot - 内容插槽
+-      footer       - 弹窗页底
+-

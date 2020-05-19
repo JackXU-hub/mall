@@ -138,7 +138,7 @@
             itemClick(index){
                 setValue('deafultActive',index)
                 this.deafultActive = index;
-                console.log('deafultActive:' + index)
+                console.log('deafultActive:' + indexstock)
             }
         }
 

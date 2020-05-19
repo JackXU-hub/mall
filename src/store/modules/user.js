@@ -16,7 +16,7 @@ const  user = {
     },
 
     mutations: {
-        ['setToken']: (state, token) => {
+       d: (state, token) => {
             state.token = token;
         },
 

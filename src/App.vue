@@ -18,5 +18,4 @@ export default {
 
 <style>
 @import "./assets/css/basecss.css";
-
 </style>

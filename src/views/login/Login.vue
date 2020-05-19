@@ -66,8 +66,8 @@
 
                 codeUrl: '/api/omc/getVerifyCodeImage',
                 loginForm: {
-                    account: 'huangsijie',
-                    passWord: '123456a',
+                    account: 'liuchunjiao',
+                    passWord: 'xyy@ybm100',
                     code: ''
                 },
 

@@ -1,0 +1,44 @@
+
+.panel-heading {
+  margin-bottom: 10px;
+  display: flex;
+
+  .panel-title {
+    margin-left: 30px;
+    height: 34px;
+    line-height: 34px;
+  }
+  .panel-operation {
+    margin-left: calc(100% - 300px);
+    .el-button {
+      color: #fff;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+.input-group-label {
+  height: 40px;
+  line-height: 40px;
+  width: 100px !important;
+  text-align: right !important;
+  float: left;
+  font-size: 14px;
+}
+
+.input-group-con {
+  width: calc(100% - 110px) !important;
+  float: right;
+  margin-left: 10px !important;
+
+}
+
+.input-group {
+  display: flex;
+}
+
+.transtion-box {
+  min-width: 1100px !important;
+  margin-bottom: 10px;
+}

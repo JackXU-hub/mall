@@ -10,6 +10,10 @@ const  Profile = () => import("views/profile/Profile")
 const  Login= () => import('views/login/Login')
 const  OrderPool= () => import('views/order/OrderPool')
 const  DistributeList= () => import('views/order/DistributeList')
+const  stockDetail = () => import('views/home/stockDetail')
+const  outboundAdjustment = () => import('views/home/outboundAdjustment')
+const  logicalBatch = () => import('views/home/logicalBatch')
+const  productNo = () => import('views/home/productNo')
 
 
 Vue.use(VueRouter)
@@ -22,6 +26,22 @@ const routes = [
     {
         path: '/login',
         component: Login
+    },
+    {
+        path: '/stockDetail',
+        component: stockDetail
+    },
+    {
+        path: '/outboundAdjustment',
+        component: outboundAdjustment
+    },
+    {
+        path: '/logicalBatch',
+        component: logicalBatch
+    },
+    {
+        path: '/productNo',
+        component: productNo
     },
     {
         path: '/main',
